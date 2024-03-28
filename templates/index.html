@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Btech Explorer</title>
+        <link rel="icon" href="/static/images/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="/static/styles/index.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body> 
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img src="/static/images/logo.png" alt="Btech Explorer Logo" />
+                </a>
+            </div>
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/college_predictor">College Predictor</a>
+                <a href="/probable_colleges">Probable Colleges</a>
+                <a href="/branch_cutoff">Branch Cutoff</a>
+                <a href="/explore_colleges">Explore Colleges</a>
+            </div>
+        </header>
+
+        <div class="info">
+            <div class="text"> 
+                <h1>Empower Your College Admissions Journey</h1>
+                <p>
+                    We provide you with a comprehensive set of tools, including
+                    a college predictor for forecasting admissions, Probable Colleges to explore potential outcomes, and Branch Cutoff. Additionally, you can efficiently
+                    explore colleges within our state, giving you a well-rounded
+                    toolkit for strategic decision-making during the counseling
+                    process. Our platform is designed to enhance your
+                    understanding and simplify the complexities of college
+                    admissions, ensuring a seamless and informed journey towards
+                    your academic goals.
+                </p>
+
+            </div>
+            <div class="image">
+                <img src="/static/images/info_image.png" alt="info_image" />
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="feature" onmouseover="showTooltip('Explore Colleges', event)" onmouseout="hideTooltip()" onclick="window.location.href='college_predictor';" class="card-link">
+                        <img src="/static/images/college_predictor.png" alt="Analytics Icon" />
+                        <h2>College Predictor</h2>
+                        <p>To determine the college and branch to be allotted based on rank, gender, and category.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="feature" onmouseover="showTooltip('Explore Colleges', event)" onmouseout="hideTooltip()" onclick="window.location.href='probable_colleges';" class="card-link">
+                        <img src="/static/images/probable_colleges.png" alt="Hypothesis Icon" />
+                        <h2>Probable Colleges</h2>
+                        <p>To find top 10 possible colleges based on rank, gender, category, and branch.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="feature" onmouseover="showTooltip('Explore Colleges', event)" onmouseout="hideTooltip()" onclick="window.location.href='branch_cutoff';" class="card-link">
+                        <img src="/static/images/branch_cutoff.png" alt="Prediction Icon" />
+                        <h2>Branch Cutoff</h2>
+                        <p>To find Cutoff ranks for different branches in a college based on gender category.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="feature" onmouseover="showTooltip('Explore Colleges', event)" onmouseout="hideTooltip()" onclick="window.location.href='explore_colleges';" class="card-link">
+                        <img src="/static/images/explore_colleges.png" alt="College Icon" />
+                        <h2>Explore Colleges</h2>
+                        <p>To find a List of Colleges located in a specific place.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

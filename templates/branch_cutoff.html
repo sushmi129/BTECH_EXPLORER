@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Branch Cutoff</title>
+        <link rel="icon" href="/static/images/branch_cutoff.png" type="image/x-icon" />
+        <link rel="stylesheet" href="/static/styles/branch_cutoff.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo">  
+                <a href="/">
+                    <img src="/static/images/logo.png" alt="Btech Explorer Logo" />
+                </a>
+            </div>
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/college_predictor">College Predictor</a>
+                <a href="/probable_colleges">Probable Colleges</a>
+                <a href="/branch_cutoff">Branch Cutoff</a>
+                <a href="/explore_colleges">Explore Colleges</a>
+            </div>
+        </header>
+
+        <section>
+            <h1>Branch Cutoff</h1>
+            
+            <div class="side">
+                    <div class="down">
+                        <form action = "/branch_cutoff" method="POST" id="predictionForm" onsubmit="return validateForm()">
+                            <div class="form-row">
+                                <div class="gen">
+                                    <label for="college-code"><b>College</b></label>&nbsp;&nbsp;
+        <select id="college-code" name="college-code" style = "width : 20px">
+            <option value="" disabled selected>-- SELECT --</option>
+            <option  name = "JNTk" value="JNTK">JNTUK COLLEGE OF ENGG. KAKINADA</option>
+    <option value="AUCE">A U COLLEGE OF ENGG. VISAKHAPATNAM</option>
+    <option value="GVPE">GAYATHRI VIDYA PARISHAD COLL. OF ENGINEERING</option>
+    <option value="SVUC">S V U COLLEGE OF ENGG. TIRUPATHI</option>
+    <option value="VITAPU">VIT-AP UNIVERSITY</option>
+    <option value="RVJC">R V R AND J C COLLEGE OF ENGINEERING</option>
+    <option value="JNTA">JNTUA COLLEGE OF ENGG. ANANTAPURAMU</option>
+    <option value="VITB">VISHNU GRP OF INSTNS - VISHNU INST OF TECHNOLOGY</option>
+    <option value="SRKR">S R K R ENGINEERING COLLEGE</option>
+    <option value="ANIL">ANIL NEERUKONDA INSTITUTE OF TECHNOLOGY AND SCI</option>
+    <option value="JNTV">JNTUK COLLEGE OF ENGINEERING VIZIANAGARAM</option>
+    <option value="GMRI">G M R INSTITUTE OF TECHNOLOGY</option>
+    <option value="MBUTPU1">MOHAN BABU UNIVERSITY</option>
+    <option value="PRAG">PRAGATI ENGINEERING COLLEGE</option>
+    <option value="PPSV">PRASAD V POTLURI SIDDHARTHA INSTT OF TECHNOLOGY</option>
+    <option value="VIVP">VIGNANS INSTITUTE OF INFORMATION TECHNOLOGY</option>
+    <option value="VVIT">VASIREDDY VENKATADRI INST. OF TECHNOLOGY</option>
+    <option value="ADTP">ADITYA ENGINEERING COLLEGE</option>
+    <option value="MVRG">M V G R COLLEGE OF ENGINEERNG</option>
+    <option value="GPRE">G P R ENGINEERING. COLLEGE</option>
+    <option value="LIET">LENDI INST OF ENGG AND TECHNOLOGY</option>
+    <option value="JNTC">JNTUA COLLEGE OF ENGINEERING. KALIKIRI</option>
+    <option value="JNTP">JNTUA COLLEGE OF ENGG PULIVENDULA</option>
+    <option value="ADIT">ADITYA INSTITUTE OF TECHNOLOGY AND MGMT</option>
+    <option value="VSVT">SRI VASAVI ENGINEERING COLLEGE</option>
+    <option value="MBUTPU2">MOHAN BABU UNIVERSITY</option>
+    <option value="MITS">MADANAPALLY INSTITUTE OF TECHNOLOGY AND SCI</option>
+    <option value="RAGU">RAGHU ENGINEERING COLLEGE</option>
+    <option value="GDLV">SESHADRI RAO GUDLAVALLERU ENGINEERING COLLEGE</option>
+    <option value="LBCE">LAKIREDDY BALIREDDY COLLEGE OF ENGINEERING</option>
+    <option value="ACET">ADITYA COLLEGE OF ENGINEERING AND TECHNOLOGY</option>
+    <option value="JNTN">JNTUK COLLEGE OF ENGINEERING NARSARAOPETA</option>
+    <option value="RITV">RAGHU INST. OF TECHNOLOGY</option>
+    <option value="SVCE">SRI VENKATESWARA COLL OF ENGINEERING</option>
+    <option value="BECB">BAPATLA ENGINEERING COLLEGE</option>
+    <option value="RGIT">RAJIV GANDHI MEMORIAL COLLEGE OF ENGG. AND TECH.</option>
+    <option value="NBKR">NBKR INSTITUTE OF SCI. AND TECHNOLOGY</option>
+    <option value="ANCUSF">ANU COLLEGE OF ENGG TECHNOLOGY-SELF FINANCE</option>
+    <option value="NARN">NARAYANA ENGINEERING COLLEGE</option>
+    <option value="NRIA">NRI INSTITUTE OF TECHNOLOGY</option>
+    <option value="VLIT">VIGNANS LARA INST. OF TECHNOLOGY AND SCI</option>
+    <option value="SKUASF">SRI KRISHNADEVARAYA UNIV.COLL.OF ENG.- SELF FINANCE</option>
+    <option value="SRIT">SRINIVASA RAMANUJAN INST OF TECHNOLOGY</option>
+    <option value="KITS">KKR AND KSR INST OF TECHNOLOGY AND SCI</option>
+    <option value="SASI">SASI INSTITUTE OF TECHNOLOGY AND ENGINEERING</option>
+    <option value="NSRT">NADIMPALLI SATYANARAYANA RAJU INSTITUTE OF TECHNOLOGY</option>
+    <option value="GIER">GODAVARI INSTITUTE OF ENGG. AND TECHNOLOGY</option>
+    <option value="CRRE">SIR C R R COLLEGE OF ENGINEERING</option>
+    <option value="NSPE">NARSARAOPETA ENGINEERING COLLEGE</option>
+    <option value="AITS">ANNAMACHARYA INST OF TECHNOLOGY AND SCIENCES</option>
+    <option value="YGVU">YGVU YSR ENGINEERING COLLEGE</option>
+    <option value="ACES">ADITYA COLLEGE OF ENGINEERING</option>
+    <option value="MICT">DVR AND DR.HS MIC COLLEGE OF TECHNOLOGY</option>
+    <option value="SDTN">SIDDHARTH INSTITUTE OF ENGG. AND TECHNOLOGY</option>
+    <option value="ANURSF">ADI KAVI NANNAYA UNIVERSITY COLLEGE OF ENGG.-SELF FINANCE</option>
+    <option value="PCEK">G.PULLAIAH COLL. OF ENGG. AND TECHNOLOGY</option>
+    <option value="PACE">PACE INSTITUTE OF TECHNOLOGY AND SCIENCES</option>
+    <option value="GIET">GIET ENGINEERING COLLEGE</option>
+    <option value="KSRM">K S R M COLLEGE OF ENGINEERING</option>
+    <option value="GVPT">G V P COLLEGE FOR DEGREE AND PG COURSES</option>
+    <option value="GTNN">GEETHANJALI INST OF SCIENCE AND TECHNOLOGY</option>
+    <option value="BVCE">B V CHALAMAIAH ENGINEERING COLLEGE</option>
+    <option value="SAVE">SANKETHIKA VIDYA PARISHAD ENGINEERING COLLEGE</option>
+    <option value="SIMH">SIMHADRI EDNL SOC GRP OF INSTNS</option>
+    <option value="APUCPU">APOLLO UNIVERSITY</option>
+    <option value="RCEE">RAMACHANDRA COLLEGE OF ENGINEERING</option>
+    <option value="SIST">SIDDHARTHA INST OF SCI AND TECHNOLOGY</option>
+    <option value="AITT">ANNAMACHARYA INST OF TECHNOLOGYAND SCIENCES</option>
+    <option value="MTIE">MOTHER THERESA INST OF ENGG AND TECH</option>
+    <option value="SVCT">SRI VENKATESWARA COLLEGE OF ENGG. AND TECHNOLOGY</option>
+    <option value="ALIT">ANDHRA LOYOLA INSTT OF ENGG AND TECHNOLOGY</option>
+    <option value="TMLN">TIRUMALA ENGINEERING COLLEGE</option>
+    <option value="ALTS">ANANTHA LAKSHMI INST OF TECHNOLOGY AND SCI</option>
+    <option value="URCE">USHA RAMA COLL OF ENGG AND TECHNOLOGY</option>
+    <option value="SWRN">SWARNANDHRA COLL. OF ENGG AND TECHNOLOGY</option>
+    <option value="BESTPU">BHARATIYA ENGG, SCI. &TECH INNOVATION UNIVERSITY</option>
+    <option value="KHIT">KALLAM HARANADH REDDY INST OF TECH</option>
+    <option value="BRAUSF">COLLEGE OF ENGINEERING BR AMBEDKAR UNIV SELF FINANCE</option>
+    <option value="JONY">ST. JOHNS COLLEGE OF ENGG. AND TECHNOLOGY</option>
+    <option value="SANK">AUDHISANKARA COLLEGE OF ENGG. AND TECHNOLOGY</option>
+    <option value="ANSN">ST. ANNS COLLEGE OF ENGG. AND TECHNOLOGY</option>
+    <option value="DLBC">DR L BULLAYYA COLL EGE OF ENGINEERING</option>
+    <option value="WSTM">WELLFARE INST OF SCIENCE TECH AND MGMT</option>
+    <option value="PSCV">POTTI SRIRAMULU COLLEGE OF ENGG AND TECHNOLOGY</option>
+    <option value="GATE">GATES INSTITUTE OF TECHNOLOGY</option>
+    <option value="QISE">QIS COLLEGE OF ENGG. AND TECHNOLOGY</option>
+    <option value="SVCN">SREE VENKATESWARA COLL OF ENGG</option>
+    <option value="VITK">P B R VISVODAYA INSTITUTE OF TECHNOLOGY AND SCI.</option>
+    <option value="SREC">SANTHIRAM ENGINEERING COLLEGE</option>
+    <option value="CIET">CHALAPATHI INST OF ENGG AND TECHNOLOGY</option>
+    <option value="PYDE">PYDAH COLL OF ENGINEERING</option>
+    <option value="NEWS">NEWTONS INST OF SCI AND TECH</option>
+    <option value="VETS">SR VENKATESWARA COLL OF ENGINEERING</option>
+    <option value="KTSP">KAKINADA INSTITUTE OF TECHNOLOGY AND SCIENCE</option>
+    <option value="NRNG">NARAYANADRI INST OF SCI TECHNOLOGY</option>
+    <option value="BVTS">CENTURION UNIVERSITY OF TECHNOLOGY & MANAGEMENT</option>
+    <option value="GITS">GANDHIJI INSTITUTE OF TECHNOLOGY AND MANAGEMENT</option>
+    <option value="AMRN">AMRITA SAI INST. OF SCIENCE AND TECHNOLOGY</option>
+    <option value="SSSE">SRI SIVANI INST. OF SCIENCE AND TECHNOLOGY</option>
+    <option value="KRUESF">KRISHNA UNIVERSITY COLLEGE OF ENGG AND TECHNOLOGY-SLEF FINAN</option>
+    <option value="ARTB">AVANTHIS RESEARCH AND TECHNOLOGICAL ACADEMY</option>
+    <option value="SRKI">S R K INST. OF TECHNOLOGY</option>
+    <option value="CBIT">CHAITANYA BHARATHI INSTITUTE OF TECHNOLOGY</option>
+    <option value="SSCE">SRI SIVANI COLLEGE OF ENGINEERING</option>
+    <option value="DHAN">DHANEKULA INST OF ENGG TECHNOLOGY</option>
+    <option value="CHDL">CHADALAWADA RAMANAMMA ENGG. COLLEGE</option>
+    <option value="SGVP">SATYA INST OF TECHNOLOGY AND MGMT</option>
+    <option value="KUPM">KUPPAM ENGINEERING COLLEGE</option>
+    <option value="CITY">CHALAPATHI INST OF TECHNOLOGY</option>
+    <option value="AVEV">AVANTHI INST. OF ENGINEERING AND TECHNOLOGY</option>
+    <option value="IDEL">IDEAL INSTITUTE OF TECHNOLOGY</option>
+    <option value="ASIP">AMRITA SAI INST. OF TECHNOLOGY</option>
+    <option value="SRIN">SRINIVASA INST OF ENGG AND TECHNOLOGY</option>
+    <option value="RUCESF">RAYALASEEMA UNIVERSITY COLLEGE OF ENGG-SELF FINANCE</option>
+    <option value="CHKN">CHAITANYA INST. OF SCI. AND TECHNOLOGY</option>
+    <option value="KORM">KANDULA OBUL REDDY MEMORIAL COLL. OF ENGG.</option>
+    <option value="ASVR">SVR ENGINEERING COLLEGE</option>
+    <option value="PVKK">P.V.K.K. INSTITUTE OF TECHNOLOGY</option>
+    <option value="MVRS">M.V.R.COLL OF ENGINEERING AND TECHNOLOGY</option>
+    <option value="ACEM">ADITYA COLLEGE OF ENGINEERING</option>
+    <option value="SSCC">SRINIVASA INSTITUTE OF TECHNOLOGY AND MANG STUDIES</option>
+    <option value="VSMR">V.S.M COLLEGE OF ENGINEERING</option>
+    <option value="ELRU">ELURU COLLEGE OF ENGG AND TECHNOLOGY</option>
+    <option value="SVIT">SRI VENKATESWARA INST OF TECHNOLOGY</option>
+    <option value="AECN">ANDHRA ENGINEERING COLLEGE</option>
+    <option value="ESWR">ESWAR COLLEGE OF ENGINEERING</option>
+    <option value="ASIT">AUDI SANKARA INST OF TECHNOLOGY</option>
+    <option value="VEMU">VEMU INSTITUTE OF TECHNOLOGY</option>
+    <option value="AVEN">AVANTHI INSTITUTE OF ENGG. AND TECHNOLOGY</option>
+    <option value="MRCL">MIRACLE EDNL SOC GROUP OF INSTNS</option>
+    <option value="CEVP">CHAITANYA ENGINEERING COLLEGE</option>
+    <option value="BVCR">BVC ENGINEERING COLLEGE</option>
+    <option value="SRET">SREE RAMA ENGINEERING COLLEGE</option>
+    <option value="RSRN">RAMIREDDY SUBBA RAMIREDDY ENGG COLLEGE</option>
+    <option value="RIET">RAJAMAHENDRI INST OF ENGG AND TECHNOLOGY</option>
+    <option value="RPRA">RISE KRISHNA SAI PRAKASAM GROUP OF INSTITUTIONS</option>
+    <option value="WISE">WEST GODAVARI INSTT OF SCIENCE AND ENGINEERING</option>
+    <option value="RGAN">RISE KRISHNA SAI GANDHI GROUP OF INSTITUTIONS</option>
+    <option value="SGEC">SAI GANAPATHI ENGINEERING COLLEGE</option>
+    <option value="NITN">NARSARAOPET INSTITUTE OF TECHNOLOGY</option>
+    <option value="LENO">LENORA COLLEGE OF ENGINEERING</option>
+    <option value="BVRM">BHIMAVARAM INST. OF ENGG. AND TECHNOLOGY</option>
+    <option value="SATS">SRI ANNAMACHARYA INSTITUTE OF TECHNOLOGY AND SCIENCE</option>
+    <option value="KVSR">DR.K.V.SUBBA REDDY INST. OF TECHNOLOGY</option>
+    <option value="VHNI">SREE VAHINI INSTT OF SCIENCE AND TECHNOLOGY</option>
+    <option value="AITK">ANNAMACHARYA INST OF TECH AND SCI</option>
+    <option value="PREC">DR PAUL RAJS ENGINEERING COLLEGE</option>
+    <option value="SVPP">SRI VENKATESA PERUMAL COLLEGE OF ENGG. AND TECH</option>
+    <option value="TECH">TADIPATRI ENGG COLLEGE</option>
+    <option value="DSIT">D.B.S.INST OF TECHNOLOGY</option>
+    <option value="HIND">HINDU COLLEGE OF ENGINEERING AND TECHNOLOGY</option>
+    <option value="PIIT">PRIYADARSHINI INST OF TECH AND MGMT</option>
+    <option value="PKSK">PRAKASAM ENGINEERING COLLEGE</option>
+    <option value="DNRE">DNR COLLEGE OF ENGG AND TECH</option>
+    <option value="BABA">BABA INST OF TECH AND SCIENCES</option>
+    <option value="VISM">VISWAM ENGINEERING COLLEGE</option>
+    <option value="LIMT">LINGAYAS INST OF MGMT AND TECHNOLOGY</option>
+    <option value="MJRT">MJR COLLEGE OF ENGG AND TECHNOLOGY</option>
+    <option value="SVUCSS">S V U COLLEGE OF ENGG. -SELF SUPPORTING-TIRUPATHI</option>
+    <option value="PRIK">PRIYADARSHINI COLL OF ENGG. AND TECHNOLOGY</option>
+    <option value="BVSR">BVSR ENGINEERING COLLEGE</option>
+    <option value="DIET">DADI INSTT. OF ENGINEERING AND TECHNOLOGY</option>
+    <option value="ASTC">AVANTHIS ST THERESSA INSTITUTE OF ENGG AND TECHNOLOGY</option>
+    <option value="GKCS">GOKULA KRISHNA COLLEGE OF ENGINEERING</option>
+    <option value="KISR">KAKINADA INSTITUTE OF TECHNOLOGY SCIENCES</option>
+    <option value="DJRC">SRI CHAITANYA -DJR COLL OF ENGG AND TECH</option>
+    <option value="SVET">SRI VASAVI INSTT OF ENGINEERING AND TECHNOLOGY</option>
+    <option value="CVRT">SIR C.V RAMAN INST OF TECHNOLOGY SCIENCES</option>
+    <option value="VVGV">VKR VNB AND AGK ENGINEERING COLLEGE</option>
+    <option value="GECG">GUNTUR ENGINEERING COLLEGE</option>
+    <option value="SVCK">SRI VENKATESWARA COLLEGE OF ENGINEERING</option>
+    <option value="KCIT">KRISHNA CHAITANYA INST OF TECHNOLOGY AND SCIENCES</option>
+    <option value="RKCE">R.K.COLLEGE OF ENGINEERING</option>
+    <option value="KMMT">KMM INST OF TECHNOLOGY AND SCIENCE</option>
+    <option value="NRIT">NRI INSTT OF TECHNOLOGY</option>
+    <option value="SVHE">D M S S V H COLLEGE OF ENGINEERING</option>
+    <option value="SIEN">SRI SARATHI INSTITUTE OF ENGG. AND TECHNOLOGY</option>
+    <option value="MPLG">SRI MITTAPALLI COLLEGE OF ENGINEERING</option>
+    <option value="GVRS">G V R AND S COLLEGE OF ENGG. AND TECHNOLOGY</option>
+    <option value="CHBR">CHEBROLU ENGINEERING COLLEGE</option>
+    <option value="SRSR">SRI SAI INSTITUTE OF TECHNOLOGY. AND SCI.</option>
+    <option value="SRIP">SAI RAJESWARI INSTITUTE OF TECHNOLOGY</option>
+    <option value="CECC">CHIRALA ENGINEERING COLLEGE</option>
+    <option value="UNIV">UNIVERSAL COLLEGE OF ENGG AND TECHNOLOGY</option>
+    <option value="STMV">SANKETHIKA INST OF TECHNOLOGY MANAGEMENT</option>
+    <option value="VSPT">VISAKHA INST OF ENGG AND TECHNOLOGY</option>
+    <option value="HITE">HELAPURI INST OF TECH AND SCIENCE</option>
+    <option value="VGTN">VIKAS GROUP OF INSTITUTIONS</option>
+    <option value="ACEE">ADARSH COLLEGE OF ENGINEERING</option>
+    <option value="SVIK">SRI VENKATESWARA INSTT. OF SCIENCE AND TECHNOLOGY</option>
+    <option value="VCTN">VIKAS COLLEGE OF ENGINEERING AND TECHNOLOGY</option>
+    <option value="ABRK">ABR COLLEGE OF ENGG AND TECHNOLOGY</option>
+    <option value="IITM">INDIRA INST OF TECHNOLOGY SCI</option>
+    <option value="VITS">VAAGDEVI INSTITUTE OF TECHNOLOGY. AND SCI.</option>
+    <option value="SEAT">SIDDARTHA EDNL ACADEMY GRP OF INSTNS</option>
+    <option value="VRIT">VARAPRASAD REDDY INST OF TECHNOLOGY</option>
+    <option value="NVRT">N.V.R.COLLEGE OF ENGG TECHNOLOGY</option>
+    <option value="NEWT">NEWTON INSTITUTE OF ENGINEERING</option>
+    <option value="BRNK">BRINDAVAN INST OF TECHNOLOGY AND SCI</option>
+    <option value="LOYL">LOYOLA INSTITUTE OF TECHNOLOGY AND MGMT</option>
+    <option value="SGIT">DR SAMUEL GEORGE INSTITUTE OF ENGG. AND TECHNOLOGY</option>
+    <option value="BEMA">BHEEMA INST OF TECHNOLOGY AND SCI</option>
+    <option value="ANMB">ACHARYA COLLEGE OF ENGINEERING</option>
+    <option value="MIET">MANDAVA INSTITUTE OF ENGG AND TECHNOLOGY</option>
+    <option value="PITT">PRIYADARSHINI INST. OF TECHNOLOGY AND SCIENCES</option>
+    <option value="STEN">SAI TIRUMALA N V R ENGINEERING COLLEGE</option>
+    <option value="PDIT">PRIYADARSHINI INST OF TECHNOLOGY</option>
+    <option value="SRTS">SRINIVASA INST OF TECHNOLOGY SCIENCE</option>
+    <option value="GVIC">GOLDEN VALLEY INTEGRATED CAMPUS</option>
+    <option value="PPDV">PALADUGU PARVATHI DEVI COLLEGE OF ENGG AND TECH</option>
+    <option value="NOVA">NOVA COLLEGE OF ENGG. AND TECHNOLOGY</option>
+    <option value="CRIT">CHIRANJIVI REDDY INST OF ENGG AND TECHNOLOGY</option>
+    <option value="GGIB">GOKUL GROUP OF INSTITUTIONS</option>
+    <option value="NIST">NARAYANADRI INST OF SCI TECHNOLOGY</option>
+    <option value="CENUPU">CENTURION UNIVERSITY OF TECHNOLOGY & MANAGEMENT</option>
+    </select>
+    
+    </div>
+    </div>
+
+                            <div class="form-row">
+                                <div class="gen">
+                                    <label for="gender" id="gid"
+                                        ><b>Gender</b></label
+                                    >
+                                    <select id="gender" name="gender" required>
+                                        <option value="" disabled selected>-- SELECT --</option>
+                                        <option name="male">MALE</option>
+                                        <option name="female">FEMALE</option>
+                                    </select>
+ 
+                                    <label for="category" id="cid"
+                                        ><b>Category</b></label
+                                    >
+                                    <select id="category" name="category" required>
+                                        <option value="" disabled selected>-- SELECT --</option>
+                                        <option name="oc">OC</option>
+                                        <option name="sc">SC</option>
+                                        <option name="st">ST</option>
+                                        <option name="BC-A">BC-A</option>
+                                        <option name="BC-B">BC-B</option>
+                                        <option name="BC-C">BC-C</option>
+                                        <option name="BC-D">BC-D</option>
+                                        <option name="BC-E">BC-E</option>
+                                    </select>
+                                </div>
+                            </div>
+ 
+                            <button type="submit" class="primary">
+                                Predict Admission
+                            </button>
+                        </form>
+                    </div>
+                   {% if plot_data %}
+                        <img src="{{ plot_data }}" alt="Cutoff Ranks Graph" id="graph">
+                        {% endif %}
+            </div>
+        </section>
+        <script>
+            function validateForm() {
+                var gender = document.getElementById('gender').value;
+                var category = document.getElementById('category').value;
+                var college = document.getElementById('college-code').value;
+
+
+                if (gender === "" || category === "" || college === "") {
+                    alert("Please fill all the required fields.");
+                    return false;
+                }   
+                return true;
+            }
+        </script>
+            
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Predictor</title>
+    <link rel="icon" href="/static/images/college_predictor.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles/college_predictor.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"> 
+                <img src="/static/images/logo.png" alt="Btech Explorer Logo">
+            </a>
+        </div>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/college_predictor">College Predictor</a>
+            <a href="/probable_colleges">Probable Colleges</a>
+            <a href="/branch_cutoff">Branch Cutoff</a>
+            <a href="/explore_colleges">Explore Colleges</a>
+        </div>
+    </header>
+
+    <section>
+        <h1>College Predictor</h1>
+        <div class="side">
+            <div class="down {% if college %} formside {% endif %}">
+                <form action="/college_predictor" method="POST" id="predictionForm" onsubmit="return validateForm()">
+                    <div class="form-row">
+                        <div class="gen">
+                            <label for="rank" id="rid"><b>Rank</b></label>
+                            <input type="number" id="rank" name="rank" placeholder="Enter Rank" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="gen">
+                            <label for="gender" id="gid"><b>Gender</b></label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>-- SELECT --</option>
+                                <option value="M">MALE</option>
+                                <option value="F">FEMALE</option>
+                            </select>
+                            <label for="category" id="cid"><b>Category</b></label>
+                            <select id="category" name="category" required>
+                                <option value="" disabled selected>-- SELECT --</option>
+                                <option value="OC">OC</option>
+                                <option value="SC">SC</option>
+                                <option value="ST">ST</option>
+                                <option value="BC_A">BC_A</option>
+                                <option value="BC_B">BC_B</option>
+                                <option value="BC_C">BC_C</option>
+                                <option value="BC_D">BC_D</option>
+                                <option value="BC_E">BC_E</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="primary">Predict Admission</button>
+                </form>
+                <div id="predictionResult" class="college-list">  
+                    <ul>
+                        <p class="textout {% if college %} output-displayed {% endif %}">
+                            Congratulations! You got admission to <b>{{college}}</b> College in <b>{{branch}}</b> Branch.
+                        </p>
+                    </ul>
+                </div>
+            </div>
+            <div id="compareSection" class="college {% if college %} outdisplayed {% endif %}">
+                <h2>Nearest Ranks</h2>
+                <table id="rankersTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>College</th>
+                            <th>Branch</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankersRecords">
+                        {% if college_list is not none %} 
+                            {% if not college_list.empty %} 
+                                {% for college in college_list.iterrows() %}
+                                    <tr>
+                                        <td>{{ college[1]['Rank'] }}</td>
+                                        <td>{{ college[1]['College'] }}</td>
+                                        <td>{{ college[1]['Branch'] }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="3" class="no-colleges">No colleges found.</td>
+                                </tr>
+                            {% endif %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script>
+        function validateForm() {
+            var rank = document.getElementById('rank').value;
+            var gender = document.getElementById('gender').value;
+            var category = document.getElementById('category').value;
+
+            if (isNaN(rank) || rank < 0 || rank > 200000) {
+                alert("Please enter a valid rank between 0 and 200000.");
+                return false;
+            }
+
+            if (gender === "" || category === "") {
+                alert("Please fill all the required fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #d4e6fe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.links {
+    display: flex;
+}
+
+.links a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ff2f00;
+}
+
+section {
+    text-align: center;
+}
+
+.side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.down {
+    display: block;
+    width: 500px;
+    margin-top: 5%;
+}
+
+form {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.gen {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.gen select,
+.gen input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    margin-right: 3%;
+}
+
+.gen select:focus,
+.gen input:focus {
+    border-color: #000000;
+}
+
+button.primary { 
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 1em;
+    background-color: #3498db;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.primary:hover {
+    background-color: #000000;
+    color: #fff;
+
+}
+
+.college-list {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.college-list h2 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-top: 5%;
+}
+
+.college-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.college-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.college-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.no-colleges {
+    color: #777;
+}
+
+#compareSection {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0%;
+}
+
+#compareSection h2 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-bottom: 2%;
+    margin-top: 0%;
+}
+
+#rankersTable {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #adabab;
+    border-collapse: collapse;
+}
+
+#rankersTable th,
+#rankersTable td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#rankersTable th {
+    background-color: #f2f2f2;
+}
+
+#rankersTable tbody tr:hover {
+    background-color: #636262;
+    color: #fff;
+}
+
+.textout {
+    display: none;
+}
+
+.output-displayed {
+    display: block;
+}
+
+.college {
+    display: none;
+}
+
+.outdisplayed {
+    display: block;
+}
+
+.formside {
+    margin-left: 10%;
+}
+
+#rid {
+    width: 15%;
+}
+
+#gid {
+    width: 15%
+}
+
+#cid {
+    width: 18%
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Explore Colleges</title>
+        <link
+            rel="icon"
+            href="/static/images/explore_colleges.png"
+            type="image/x-icon"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/static/styles/explore_colleges.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/"
+                    ><img
+                        src="/static/images/logo.png"
+                        alt="Btech Explorer Logo"
+                /></a>
+            </div>
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/college_predictor">College Predictor</a>
+                <a href="/probable_colleges">Probable Colleges</a>
+                <a href="/branch_cutoff">Branch Cutoff</a>
+                <a href="/explore_colleges">Explore Colleges</a>
+            </div>
+        </header>
+
+        <h1>Explore Colleges</h1>  
+
+        <div class="container"> 
+            <div class="box-container {% if colleges %} output-displayed {% endif %}">
+                <section>
+                    <div class="dropdown"> 
+                        <form action="/explore_colleges" method="POST" onsubmit="return validateForm()">
+                            <div class="dropdown-row">
+                                <label for="district"><b>Place</b></label>
+                                <select id="district" name="district">
+                                <option value="" disabled selected>-- SELECT --</option>
+                                <option value="CHITTOOR">Chittoor</option>
+                                <option value="RAMACHANDRA PURAM">Ramachandra Puram</option>
+                                <option value="VIDYANAGAR">Vidyanagar</option>
+                                <option value="PULIVENDULA">Pulivendula</option>
+                                <option value="RAJAMPETA">Rajampeta</option>
+                                <option value="RAJAM">Rajam</option>
+                                <option value="NALLAJERLA">Nallajerla</option>
+                                <option value="CHEEPURUPALLI">
+                                    Cheepurupalli
+                                </option>
+                                <option value="SABBAVARAM">Sabbavaram</option>
+                                <option value="DIVILI">Divili</option>
+                                <option value="NARSIPATNAM">Narsipatnam</option>
+                                <option value="ANANTAPURAM U">
+                                    Anantapuram U
+                                </option>
+                                <option value="TADEPALLIGUDEM">
+                                    Tadepalligudem
+                                </option>
+                                <option value="BHOGAPURAM">Bhogapuram</option>
+                                <option value="PRODDATUR">Proddatur</option>
+                                <option value="AGIRIPALLY">Agiripally</option>
+                                <option value="PINAGADI">Pinagadi</option>
+                                <option value="CHIRALA">Chirala</option>
+                                <option value="NARSARAOPET">Narsaraopet</option>
+                                <option value="VADLAMUDI">Vadlamudi</option>
+                                <option value="GUDLAVALLERU">
+                                    Gudlavalleru
+                                </option>
+                                <option value="TIRUVURU">Tiruvuru</option>
+                                <option value="ANANTAPUR">Anantapur</option>
+                                <option value="TENALI">Tenali</option>
+                                <option value="KUPPAM">Kuppam</option>
+                                <option value="KAKINADA">Kakinada</option>
+                                <option value="NARSAPURAM">Narsapuram</option>
+                                <option value="IBRAHIMPATNAM">
+                                    Ibrahimpatnam
+                                </option>
+                                <option value="BHIMAVARAM">Bhimavaram</option>
+                                <option value="YETAPAKA">Yetapaka</option>
+                                <option value="GUDUR">Gudur</option>
+                                <option value="TELAPROLU">Telaprolu</option>
+                                <option value="SULLURPET">Sullurpet</option>
+                                <option value="MADANAPALLE">Madanapalle</option>
+                                <option value="AMALAPURAM">Amalapuram</option>
+                                <option value="BADVEL">Badvel</option>
+                                <option value="MYLAVARAM">Mylavaram</option>
+                                <option value="RAJAHMUNDRY">Rajahmundry</option>
+                                <option value="TEKKALI">Tekkali</option>
+                                <option value="RANGAMPETA">Rangampeta</option>
+                                <option value="KANIGIRI">Kanigiri</option>
+                                <option value="TADIPATRI">Tadipatri</option>
+                                <option value="TIRUPATHI">Tirupathi</option>
+                                <option value="VISAKHAPATNAM">
+                                    Visakhapatnam
+                                </option>
+                                <option value="ELURU">Eluru</option>
+                                <option value="KADAPA">Kadapa</option>
+                                <option value="MARKAPUR">Markapur</option>
+                                <option value="ONGOLE">Ongole</option>
+                                <option value="JAGGAIAHPETA">
+                                    Jaggaiahpeta
+                                </option>
+                                <option value="KAVALI">Kavali</option>
+                                <option value="CHIMAKURTHY">Chimakurthy</option>
+                                <option value="ATMAKUR N">Atmakur N</option>
+                                <option value="KANCHIKACHERLA">
+                                    Kanchikacherla
+                                </option>
+                                <option value="ANAKAPALLE">Anakapalle</option>
+                                <option value="JANGAREDDYGUDEM">
+                                    Jangareddygudem
+                                </option>
+                                <option value="PEDANA">Pedana</option>
+                                <option value="AMARAVATHI">Amaravathi</option>
+                                <option value="PEDDAPURAM">Peddapuram</option>
+                                <option value="NUZVID">Nuzvid</option>
+                                <option value="RAYCHOTI">Raychoti</option>
+                                <option value="KALIKIRI">Kalikiri</option>
+                                <option value="KURNOOL">Kurnool</option>
+                                <option value="MACHERLA">Macherla</option>
+                                <option value="NELLORE">Nellore</option>
+                                <option value="YEMMIGANOOR">Yemmiganoor</option>
+                                <option value="GUDIVADA">Gudivada</option>
+                                <option value="GUNTUR">Guntur</option>
+                                <option value="BOBBILI">Bobili</option>
+                                <option value="CHEYYERU">Cheyyeru</option>
+                                <option value="ADONI">Adoni</option>
+                                <option value="PALLAVOLU">Pallavolu</option>
+                                <option value="VIZIANAGARAM">
+                                    Vizianagaram
+                                </option>
+                                <option value="SATTENAPALLY">
+                                    Sattenapally
+                                </option>
+                                <option value="GOLLAPROLU">Gollaprolu</option>
+                                <option value="MACHILIPATNAM">
+                                    Machilipatnam
+                                </option>
+                                <option value="VIJAYAWADA RURAL">
+                                    Vijayawada Rural
+                                </option> 
+                                <option value="PUTAPARTHI">Puttaparthi</option>
+                                <option value="BAPATLA">Bapatla</option>
+                                <option value="NANDYAL">Nandyal</option>
+                                <option value="PILER">Piler</option>
+                                <option value="PARITALA">Paritala</option>
+                                <option value="SRIKAKULAM">Srikakulam</option>
+                                <option value="KANDKUR">Kandkur</option>
+                                <option value="ODALAREVU">Odalarevu</option>
+                                <option value="BHEEMUNIPATNAM">
+                                    Bheemunipatnam
+                                </option>
+                                <option value="VIJAYAWADA">Vijayawada</option>
+                                <option value="GOOTY">Gooty</option> 
+                                <option value="PUTTUR">Puttur</option>
+
+                                </select>
+                            </div>
+                            <div class="button-row">
+                                <button type="submit">Explore Colleges</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="output {% if colleges %} outdisplayed {% endif %}" id="out">
+                <ol type="1">
+                    {% for college in colleges %}
+                    <li>{{ college }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+        <script>
+            function validateForm() {
+                var district = document.getElementById('district').value;
+                if (district === "") {
+                    alert("Please select a district.");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

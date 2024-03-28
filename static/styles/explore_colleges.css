@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+header {
+    background-color: #d4e6fe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.links a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ff2f00;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    margin-top: 6%;
+}
+
+.box-container {
+    max-width: 900px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.box-container.output-displayed {
+    margin-right: 5%;
+    margin-left: 5%; 
+}
+
+section {
+    padding: 20px 0;
+    text-align: center;
+    width: 500px;
+}
+
+#district{
+    width: 85%;
+}
+
+.dropdown {
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown form {
+    width: 100%;
+}
+
+.dropdown-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dropdown-row label {
+    margin-right: 10px;
+}
+
+.dropdown-row select {
+    width: 200px;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 0%;
+}
+
+.button-row button {
+    width: 100%;
+    padding: 10px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    background-color: #3498db;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-row button:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.output {
+    margin-top: 20px;
+    display: none;
+}
+
+.outdisplayed{
+    display: block;
+}
+
+.output ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.output li {
+    font-size: 1.2em;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+

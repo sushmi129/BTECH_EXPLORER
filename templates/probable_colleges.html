@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Probable Colleges</title>
+        <link
+            rel="icon"
+            href="/static/images/probable_colleges.png" 
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="/static/styles/probable_colleges.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img
+                        src="/static/images/logo.png"
+                        alt="Btech Explorer Logo"
+                    />
+                </a>
+            </div>
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/college_predictor">College Predictor</a>
+                <a href="/probable_colleges">Probable Colleges</a>
+                <a href="/branch_cutoff">Branch Cutoff</a>
+                <a href="/explore_colleges">Explore Colleges</a>
+            </div>
+        </header>
+        <h1>Probable Colleges</h1>
+
+        <div class="probable">
+            <form action="/probable_colleges" method="POST" onsubmit="return validateform()">
+                <div class="side">
+                    <label for="rank"><b>Rank</b></label>
+                    <input
+                        type="number"
+                        id="rank"
+                        name="rank"
+                        value = "rank"
+                        placeholder="Enter Rank"
+                        required
+                    />
+                </div>
+
+                <div class="side">
+                    <label for="gender"><b>Gender</b></label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>-- SELECT --</option>
+                        <option name="male">MALE</option>
+                        <option name="female">FEMALE</option>
+                    </select>
+                </div>
+
+                <div class="side">
+                    <label for="category"><b>Category</b></label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>-- SELECT --</option>
+                        <option name="oc">OC</option>
+                        <option name="sc">SC</option>
+                        <option name="st">ST</option>
+                        <option name="BC-A">BC-A</option>
+                        <option name="bc-b">BC-B</option>
+                        <option name="bc-c">BC-C</option>
+                        <option name="bc-d">BC-D</option>
+                        <option name="bc-e">BC-E</option>
+                    </select>
+                </div>
+
+                <div class="side">
+                    <label for="branch"><b>Branch</b></label>
+                    <select id="branch" name="branch" required>
+                        <option value="" disabled selected>-- SELECT --</option>
+                        <option value="COMPUTER SCIENCE AND ENGINEERING">
+                            COMPUTER SCIENCE AND ENGINEERING
+                        </option>
+                        <option
+                            value="ELECTRONICS AND COMMUNICATION ENGINEERING"
+                        >
+                            ELECTRONICS AND COMMUNICATION ENGINEERING
+                        </option>
+                        <option value="ELECTRICAL AND ELECTRONICS ENGINEERING"> 
+                            ELECTRICAL AND ELECTRONICS ENGINEEING
+                        </option>
+                        <option value="CIVIL ENGINEERING">
+                            CIVIL ENGINEERING
+                        </option>
+                        <option value="MECHANICAL ENGINEERING">
+                            MECHANICAL ENGINEERING
+                        </option>
+                    </select>
+                </div>
+                <button type="submit" class="predict">Predict Chances</button>
+            </form>
+            <div class="college-list {% if colleges %} outdisplayed {% endif %}" id="res">
+                <ol type="1">
+                    {% if colleges %} {% for college in colleges %}
+                    <li>{{ college }}</li>
+                    {% endfor %} {% else %}{% endif %}
+                </ol>
+            </div>
+        </div>
+        <script>
+            function validateform() {
+                var rank = document.getElementById("rank").value;
+                var gender = document.getElementById('gender').value;
+                var category = document.getElementById('category').value;
+                var branch = document.getElementById('branch').value;
+
+            if (isNaN(rank) || rank < 0 || rank > 200000) {
+                alert("Please enter a valid rank between 0 and 200000.");
+                return false;
+            }
+
+            if (gender === "" || category === "" || branch === "") {
+                alert("Please fill all the required fields.");
+                return false;
+            }
+            return true;
+        }
+        </script>
+    </body>
+</html>
